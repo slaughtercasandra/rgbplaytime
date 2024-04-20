@@ -1,0 +1,178 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  /* Ensure border width is included in total width */
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.border-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  /* Set height of the container to full viewport height */
+}
+
+.vertical-border {
+  border-right: 2px solid white;
+  /* Add border to split the page vertically */
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  /* Allow the container to grow to fill the remaining space */
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  /* Increase margin for more spacing between containers */
+}
+
+h1 {
+  margin: 0;
+  animation: lightUp 5s infinite alternate;
+}
+
+/* CSS for the header */
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  /* Initial color */
+  transition: background-color 0.5s ease;
+}
+
+#galaxy {
+  margin-right: 40px;
+  margin-top: 30%;
+  animation: twinkle 2.5s infinite alternate;
+}
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.tiny-box {
+  width: 20px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+
+/* .central-circle { */
+/* position: absolute; */
+/* top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100px;
+height: 100px;
+background-color: white;
+border-radius: 50%;
+z-index: 1; /* Ensure the central circle is above the stars */
+
+
+/* .star-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: expand 5s linear infinite alternate;
+} */
+
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  
+   }
+
+  50% {
+    opacity: 1;
+    }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+/* @keyframes expand {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+} */
+
+@keyframes lightUp {
+  from {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+  }
+
+  to {
+    color: #00ff00;
+    text-shadow: 0 0 20px purple;
+  }
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+/* Styles for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+/* Styles for screens between 992px and 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+      font-size: 18px;
+  }
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+  body {
+      font-size: 20px;
+  }
+}
